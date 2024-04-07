@@ -1,0 +1,69 @@
+{
+  "ignorePatterns": ["**/*"],
+  "plugins": ["import"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "builtin"
+              },
+              {
+                "pattern": "@src/**",
+                "group": "parent",
+                "position": "before"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["builtin"],
+            "alphabetize": {
+              "order": "asc"
+            },
+            "newlines-between": "always"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ],
+  "extends": ["./.eslintrc.base.json"]
+}
