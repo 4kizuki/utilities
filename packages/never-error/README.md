@@ -1,11 +1,18 @@
 # never-error
 
-This library was generated with [Nx](https://nx.dev).
+```typescript
+import { NeverError } from '@4kizuki/never-error';
 
-## Building
-
-Run `nx build never-error` to build the library.
-
-## Running unit tests
-
-Run `nx test never-error` to execute the unit tests via [Jest](https://jestjs.io).
+function someSwitch(value: '1' | '2' | '3') {
+  switch (value) {
+    case '1':
+      return 'one';
+    case '2':
+      return 'two';
+    case '3':
+      return 'three';
+    default:
+      throw new NeverError(value, 'value');
+  }
+}
+```

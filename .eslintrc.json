@@ -1,5 +1,6 @@
 {
   "ignorePatterns": ["**/*"],
+  "plugins": ["import"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -15,6 +16,35 @@
                 "onlyDependOnLibsWithTags": ["*"]
               }
             ]
+          }
+        ],
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling", "index"],
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "react",
+                "group": "builtin"
+              },
+              {
+                "pattern": "@src/**",
+                "group": "parent",
+                "position": "before"
+              }
+            ],
+            "pathGroupsExcludedImportTypes": ["builtin"],
+            "alphabetize": {
+              "order": "asc"
+            },
+            "newlines-between": "always"
           }
         ]
       }
