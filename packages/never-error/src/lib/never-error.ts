@@ -5,6 +5,6 @@ export class NeverError extends Error {
         ? `Reached an unreachable code. The variable "${name}" was marked as never, but it was actually ${value}.`
         : `Reached an unreachable code. The variable was marked as never, but it was actually ${value}.`
     );
-    this.name = 'NeverError';
+    this.name = "NeverError";
   }
 }
