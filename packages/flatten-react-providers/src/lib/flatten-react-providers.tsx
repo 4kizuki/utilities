@@ -1,4 +1,4 @@
-import { ComponentType, ReactElement, ReactNode } from "react";
+import React, { ComponentType, ReactElement, ReactNode } from "react";
 
 class Builder {
   public constructor(
