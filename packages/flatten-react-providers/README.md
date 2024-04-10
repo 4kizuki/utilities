@@ -24,11 +24,7 @@ const App: FunctionComponent = () => {
 import { FunctionComponent } from "react";
 import { FlattenProviders } from "@4kizuki/flatten-react-providers";
 
-const MergedProviders = FlattenProviders()
-  .chain(MyProvider1)
-  .chain(MyProvider2)
-  .chain(MyProvider3)
-  .build();
+const MergedProviders = FlattenProviders().chain(MyProvider1).chain(MyProvider2).chain(MyProvider3).build();
 
 const SimplifiedApp: FunctionComponent = () => {
   return (
