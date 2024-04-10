@@ -1,0 +1,21 @@
+{
+  "name": "flatten-react-providers",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/flatten-react-providers/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project flatten-react-providers --web",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/flatten-react-providers",
+        "index": "packages/flatten-react-providers/src/index.ts",
+        "main": "packages/flatten-react-providers/src/index.ts",
+        "tsConfig": "packages/flatten-react-providers/tsconfig.lib.json",
+        "assets": ["packages/flatten-react-providers/*.md"]
+      }
+    }
+  }
+}

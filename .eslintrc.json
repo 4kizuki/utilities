@@ -33,11 +33,6 @@
               {
                 "pattern": "react",
                 "group": "builtin"
-              },
-              {
-                "pattern": "@src/**",
-                "group": "parent",
-                "position": "before"
               }
             ],
             "pathGroupsExcludedImportTypes": ["builtin"],

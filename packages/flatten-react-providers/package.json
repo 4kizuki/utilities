@@ -1,0 +1,13 @@
+{
+  "name": "@4kizuki/flatten-react-providers",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "peerDependencies": {
+    "react": "^18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

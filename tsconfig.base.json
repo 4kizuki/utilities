@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@4kizuki/flatten-react-providers": [
+        "packages/flatten-react-providers/src/index.ts"
+      ],
       "@4kizuki/never-error": ["packages/never-error/src/index.ts"],
       "@4kizuki/rsc-component-types": [
         "packages/rsc-component-types/src/index.ts"
