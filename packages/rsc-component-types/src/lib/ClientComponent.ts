@@ -15,6 +15,5 @@ type SyncReactNode =
   | ReactPortal
   | Iterable<ReactNode>;
 
-export type ClientComponent<
-  P extends Record<string, unknown> = Record<string, never>
-> = FunctionComponent<P> & ((props: P) => SyncReactNode);
+export type ClientComponent<P extends object = Record<string, never>> =
+  FunctionComponent<P> & ((props: P) => SyncReactNode);
